@@ -66,3 +66,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+##`React-Router`implementation
+Here, we will implement react-router in the navigation panel so to go from one page to another. For that first we will install 'react-router' library in our project using given command.
+'yarn add i react-router-dom'
