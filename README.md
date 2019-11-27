@@ -76,6 +76,39 @@ Then we'll start implementing it. First in the `index.js`  the component `{Brows
 
 Next we'll add different components for routing. They are `Customers, MovieForm, NotFound, Rentals.` And the we'll create routes.
 
-In `app.js` file  import `Route` component  so to implement routing for all  components that we want to browse through. For that `Route` component needs two arguments `path` here we define our path for the compoent  and `component` here component that we want to browse through is mentioned. 
+In `app.js` file  import `Route` component  so to implement routing for all  components that we want to browse through. For that `Route` component needs two arguments `path` here we define our path for the component  and `component` here component that we want to browse through is mentioned. 
 
 `<Route> path='/movies' component={Movies}</Route>`
+
+Now  add `<Redirect> and <Switch>` to make browsing more systematic.
+
+### Nav-Bar
+Implement nativation using bootstrap boilerplate code by creating a seprate `NavBar` component. Then set navigation for all the component that is to be navigated.
+
+Rename `class to className, a to NavLink, href-to `. Then assing them their corresponing path for the navigation. Like:
+
+`<NavLink  className="nav-item nav-link" to="/movies"> 
+Movies </NavLink>`
+
+`imoport {Link, NavLink}` these components are imported.
+
+### Linking the table
+
+In order to give link to tables we need to modify the first column content in `moviesTable` component. So to render  link component we pass movie as parameter to arrow function get link to movie with proper id.
+
+`Movie details page` for this we need to register new route.
+In `App.js` add new route for `MovieForm` which direct to give clicked movie.
+
+ Now we can exact movie based on their id.
+ We added here a button to take user back to the movies page.
+### React-Router Summary
+In this seciton we implemented 
+`
+ Reoute Parameters
+Query String
+Redirect user to and fro
+Not Found (404) Pages
+Nested Routing
+`
+### Form Building
+In this section we build form with validation.
