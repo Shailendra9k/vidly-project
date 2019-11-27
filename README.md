@@ -67,6 +67,9 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
-##React-Router 
+## React-Router 
+
 Here, we will implement react-router in the navigation panel so to go from one page to another. For that first we will install `react-router` library in our project using given command.
 `yarn add i react-router-dom`
+
+Then we'll start implementing it. First in the `index.js`  the component `{BrowserRouter}` is implemented and then `<App />` component is wrapped in side of it so to keep our browng history.
