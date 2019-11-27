@@ -69,7 +69,13 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 ## React-Router 
 
-Here, we will implement react-router in the navigation panel so to go from one page to another. For that first we will install `react-router` library in our project using given command.
+Here, we will implement react-router in the navigation panel so to browse from one page to another. For that first we will install `react-router` library in our project using given command.
 `yarn add i react-router-dom`
 
-Then we'll start implementing it. First in the `index.js`  the component `{BrowserRouter}` is implemented and then `<App />` component is wrapped in side of it so to keep our browng history.
+Then we'll start implementing it. First in the `index.js`  the component `{BrowserRouter}` is imported and then `<App />` component is wrapped in side of it so to keep our browng history.
+
+Next we'll add different components for routing. They are `Customers, MovieForm, NotFound, Rentals.` And the we'll create routes.
+
+In `app.js` file  import `Route` component  so to implement routing for all  components that we want to browse through. For that `Route` component needs two arguments `path` here we define our path for the compoent  and `component` here component that we want to browse through is mentioned. 
+
+`<Route> path='/movies' component={Movies}</Route>`
