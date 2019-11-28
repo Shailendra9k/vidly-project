@@ -72,11 +72,11 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 Here, we will implement react-router in the navigation panel so to browse from one page to another. For that first we will install `react-router` library in our project using given command.
 `yarn add i react-router-dom`
 
-Then we'll start implementing it. First in the `index.js`  the component `{BrowserRouter}` is imported and then `<App />` component is wrapped in side of it so to keep our browng history.
+Then we'll start implementing it. First in the `index.js`  the component `{BrowserRouter}` is imported and then `<App />` component is wrapped in side of it so to keep our browsing history.
 
-Next we'll add different components for routing. They are `Customers, MovieForm, NotFound, Rentals.` And the we'll create routes.
+Next we'll add different components for routing where we will nagivate to. They are `Customers, MovieForm, NotFound, Rentals.` And the we'll create routes.
 
-In `app.js` file  import `Route` component  so to implement routing for all  components that we want to browse through. For that `Route` component needs two arguments `path` here we define our path for the component  and `component` here component that we want to browse through is mentioned. 
+In `app.js` file  import `Route` component  so to implement routing for all  components that we want to browse through. For that `Route` component needs two arguments `path` here we define our path for the component  and `component` here component that we want to browse through is mentioned. These are different component for our app we create for different purposes.
 
 `<Route> path='/movies' component={Movies}</Route>`
 
@@ -101,14 +101,27 @@ In `App.js` add new route for `MovieForm` which direct to give clicked movie.
 
  Now we can exact movie based on their id.
  We added here a button to take user back to the movies page.
+ 
 ### React-Router Summary
 In this seciton we implemented 
 `
- Reoute Parameters
+Route Parameters
 Query String
-Redirect user to and fro
+Redirect user to and fr o
 Not Found (404) Pages
 Nested Routing
 `
 ### Form Building
-In this section we build form with validation.
+In this section we build form with validation. 
+
+We will build login form.
+Registration form
+Form to edit movies in Vildy project.
+Add search box.
+
+### Login Form
+We create `loginForm ` component then create route for it  and finally add to `NavBar` for navigation.
+Now `Login` is filled with its content using `Bootstrap Form` where we create input field for user to login in the system using `Credentials`.
+`Zencoding trick: (form>div.form-group>lable+input.form-control)*2` for quick and easy form creating inside ´div´. 
+
+We will `Handle Form submission` by creating a method with preventDefault event.
