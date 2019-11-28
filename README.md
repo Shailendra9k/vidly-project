@@ -120,8 +120,34 @@ Form to edit movies in Vildy project.
 Add search box.
 
 ### Login Form
+
 We create `loginForm ` component then create route for it  and finally add to `NavBar` for navigation.
+
 Now `Login` is filled with its content using `Bootstrap Form` where we create input field for user to login in the system using `Credentials`.
-`Zencoding trick: (form>div.form-group>lable+input.form-control)*2` for quick and easy form creating inside ´div´. 
+`Zencoding trick: (form>div.form-group>lable+input.form-control)*2` for quick and easy form creating inside `div`. 
+
+Next we add `id` for both inputs `Username and Password`, which must be same same value for `label's htmlFor and id` in both cases of Username and Password.
+
+As we need `Login` button so we use `button.btn.btn-primary` to create a bootstrapped button.
+
+### Handling Form Submission
 
 We will `Handle Form submission` by creating a method with preventDefault event.
+
+As every form submisstion has an event `onSubmit` we will create a method for it and set it to `preventDefault` so to control default behaviour of form which is full page loading of the form with submission.
+
+### Setting Value of the Input Form
+
+When building forms, quite often our form components have state that is initialized based on what we get from the server.
+For example, if we are builidng movie component form, we need to call the server, get the movies with given id, store it in the state and then populate the form.
+
+Similar concept we apply with our login form but here we get state from our user as `Username and Password`.
+We set our each input field creating two states for username and password remaining initially empty.
+Then we update with `this.setState` using method which we'll create for each inputs on event `onChange`. 
+
+Since, we have multiple inputs we can hanlde their property with `handleChange` method dynamically. For which we need to add `name attribute` to both inputs in this case and then set `handleChange` accordingly.
+Also, we can use object destructuring in `render` to make our code cleaner.
+
+`const {account} = this.state`
+
+Note: When we work with property dynamically instead of using, dot notation we can work with bracket notation. 
